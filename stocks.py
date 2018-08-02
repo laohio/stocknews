@@ -21,6 +21,8 @@ from datetime import datetime
 # via the Alpha Vantage Python module).
 class Stock(object):
 	def __init__(self, stock_name, alpha_key, plotly_key):
+		print('NAME OF THE STOCK IS: ',stock_name,'KEY IS: ',alpha_key)
+		
 		# Initialize the stock's name as a member variable
 		self.name = stock_name
 		# Set Alpha Vantage API key as a member variable
@@ -30,7 +32,7 @@ class Stock(object):
 		# Set plotly credentials
 		self.plotly_key = plotly_key
 		plotly.tools.set_credentials_file(username='laohio', api_key=self.plotly_key)
-
+	
 	# EXTERNAL API: ALPHA VANTAGE TIME SERIES API
 	# Retrieve data for the given stock.  Comes formatted in a Pandas-style dataframe which includes the stock's opening price, closing price,
 	# and more over the past 100 days.

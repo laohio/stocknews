@@ -40,7 +40,9 @@ def index():
 @app.route("/news")
 def news():
 	# Instantiate stock class using the name of the stock entered, and API keys entered
-	stock1 = Stock(session['company_name'], session['alpha_key'], session['plotly_key'])
+	stock1 = Stock(session['stock_name'], session['alpha_key'], session['plotly_key'])
+
+
 	# Get the date that the stock dropped most in price, so that this can be used to get news articles in the News API
 	date = stock1.getMaxDropDate()[1]
 	print('THE DATE RETRIEVED IS: ',date)

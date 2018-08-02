@@ -1,3 +1,6 @@
+'''
+Class for the form on the landing page.
+'''
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 
 class MainForm(Form):

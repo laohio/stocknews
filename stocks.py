@@ -1,3 +1,9 @@
+'''
+Stock class.  Contains all the data analysis needed to find information about the stock's performance (e.g. the date that the price
+dropped most, etc.).  Takes in the name of a stock, Alpha Vantage API Key, and Plotly API key as arguments.  This is where you can 
+generate a Plotly URL of a stock chart.
+'''
+
 # Time series API from Alpha Vantage.  We use a Python wrapper for convenience.  
 from alpha_vantage.timeseries import TimeSeries
 import matplotlib

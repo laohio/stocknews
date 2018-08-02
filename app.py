@@ -1,3 +1,11 @@
+'''
+Application's server logic.  Contains:
+1.) An index view, in which the user will be directed to fill out a form to get stock and 
+news information for a particular stock/company name.  
+2.) A news view, which is the main interface for the app, containing an embedded stock chart and a list of related
+news articles.
+'''
+
 import requests
 from flask import Flask, request, flash, render_template, redirect, url_for, session
 from collections import defaultdict

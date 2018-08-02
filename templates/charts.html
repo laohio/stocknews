@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Stocks and the News</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/stylesheet.css' )}}" />
+
+    <!-- Font for news headlines -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+
+  </head>
+  <body>
+      <div>
+          <a href={{stock_url}} target="_blank" title="simple_candlestack" style="display: block; text-align: center;"><img src={{stock_url}} alt="simple_candlestack" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+          <script data-plotly="laohio:2" sharekey-plotly="ekY3aWW6xmrCESfr6yUUmC" src="https://plot.ly/embed.js" async></script>
+      </div>
+
+
+      <div id="page-results">
+        <div class="result-box"><a href={{h1_link}}>{{headline1}}</a></div>
+        <div class="result-box"><a href={{h2_link}}>{{headline2}}</a></div>
+        <div class="result-box"><a href={{h3_link}}>{{headline3}}</a></div>
+        <div class="result-box"><a href={{h4_link}}>{{headline4}}</a></div>
+      </div>
+  </body>
+</html>

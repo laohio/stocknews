@@ -5,31 +5,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Stocks and the News</title>
 
+    <!-- h1 font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+
+
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form_styling.css' )}}" />
 
   </head>
   <body>
-      {% with messages = get_flashed_messages(with_categories=True) %}
-        {% if messages %}
-          <ul>
-          {% for message in messages %}
-            <li>{{message[1]}}</li>
-          {% endfor %}
-          </ul>
-        {% endif %}
-        {% endwith %}
-      
-      <form action="" method="post">
-        {{ form.csrf }}
-        <div class="input text">{{form.company_name.label}}  {{form.company_name}}</div>
-        <div class="input text">{{form.stock_name.label}}  {{form.stock_name}}</div>
+      <div id="parent">
 
-        <div class="input text">{{form.alpha_key.label}}  {{form.alpha_key}}</div>
-        <div class="input text">{{form.plotly_key.label}}  {{form.plotly_key}}</div>
+        <h1>Stocks and the News</h1>
+        <form action="" method="post">
+          {{ form.csrf }}
+          <div class="input text">{{form.company_name.label}}  {{form.company_name}}</div>
+          <div class="input text">{{form.stock_name.label}}  {{form.stock_name}}</div>
 
+          <div class="input text">{{form.alpha_key.label}}  {{form.alpha_key}}</div>
+          <div class="input text">{{form.plotly_key.label}}  {{form.plotly_key}}</div>
 
-        <div class="input submit"><input type="submit" value="Submit" /></div>
+          <div class="input submit"><input type="submit" value="Submit" /></div>
       </form>
+      
+      </div>
   </body>
 </html>

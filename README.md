@@ -4,8 +4,7 @@ Date: 2018/08/02
 OVERVIEW
 --------
 The purpose of this app is to demonstrate the myriad ways that real-world events can affect stock prices.  To achieve this, 
-I've created an interface that combines a stock chart displaying closing prices over a 100-day span (Fig 1) along with news articles
-corresponding to certain dates, like the day of the biggest drop in the stock's price (Fig 2) -- currently this is the only "special date" I have implemented.
+I've created a user interface that combines a stock chart displaying closing prices over a 100-day span (Fig 1) along with news articles corresponding to certain dates, like the day of the biggest drop in the stock's price (Fig 2) -- currently this is the only "special date" I have implemented.
 
 Fig 1:
 <img width="1279" alt="screen shot 2018-08-02 at 9 22 00 pm" src="https://user-images.githubusercontent.com/16903793/43619110-3bb0c4d4-969a-11e8-8bbe-ac8d27d7ffa1.png">

@@ -103,7 +103,6 @@ def getHeadlines(articles):
 		headlines[key].append(articles[i-1]['source']['name'])
 	return headlines
 
-
 if __name__ == "__main__":
 	app.debug=True
 	app.run()

@@ -8,7 +8,7 @@ I've created an interface that combines a stock chart displaying closing prices 
 corresponding to certain dates, like the day of the biggest drop in the stock's price (Fig 2) -- currently this is the only "special date" I have implemented.
 
 Fig 1:
-<img width="1280" alt="screen shot 2018-08-01 at 8 12 52 pm" src="https://user-images.githubusercontent.com/16903793/43618941-5d168d30-9699-11e8-9980-7a1c830ce6f8.png">
+<img width="1279" alt="screen shot 2018-08-02 at 9 22 00 pm" src="https://user-images.githubusercontent.com/16903793/43619110-3bb0c4d4-969a-11e8-8bbe-ac8d27d7ffa1.png">
 
 Fig 2:
 <img width="1280" alt="screen shot 2018-08-02 at 9 07 17 pm" src="https://user-images.githubusercontent.com/16903793/43618981-91129e6c-9699-11e8-8b23-f1bdf3b6f0bc.png">

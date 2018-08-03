@@ -97,7 +97,7 @@ class Stock(object):
 		    textposition='top center'
 		)
 		# Title of the stock chart
-		title = self.name + ' Daily Stock Prices'
+		title = self.name.upper() + ' Daily Stock Prices'
 		# Details for the title and axes
 		layout = go.Layout(
 		    title=title,

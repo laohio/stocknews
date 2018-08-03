@@ -41,6 +41,9 @@ I am the sole contributor to this app.
 
 USING THE APP
 --------------
+Clone the repository, then add requirements from requirements.txt.  Type "flask run" to run the app, then open a browser and head to address 
+'http://127.0.0.1:5000/' in your browser.
+
 Because of the call limits on the free versions of the Alpha Vantage and Plotly APIs, the form requires that the user enter their
 API keys.  These can easily be obtained at: 
 

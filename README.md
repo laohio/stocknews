@@ -19,7 +19,8 @@ side project I did for my own learning, and thus may not run perfectly.
 
 IMPLEMENTATION
 --------------
-I used 3 external services to obtain the information I needed to build this app: <br>
+I used 3 external services to obtain the information I needed to build this app:
+
 1.) Alpha Vantage - A service that provides time series APIs for both real-time and historical stock data.  I use stock data from this service formatted in Pandas-style dataframes to perform any data analysis. <br>
 2.) NewsAPI.org - A service that provides JSON data for news articles pertaining to a particular topic. <br>
 3.) Plotly - A service that provides scietnific graphing libraries.  Based off of the user-inputted stock name, I dynamically generate

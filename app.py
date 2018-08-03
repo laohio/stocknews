@@ -2,8 +2,8 @@
 Application's server logic.  Contains:
 1.) An index view, in which the user will be directed to fill out a form to get stock and 
 news information for a particular stock/company name.  
-2.) A news view, which is the main interface for the app, containing an embedded stock chart and a list of related
-news articles.
+2.) A news view, which contains the logic for the main user interface for the app, i.e. an embedded stock chart and a 
+list of related news articles.
 '''
 
 import requests
@@ -16,7 +16,8 @@ from .forms import MainForm
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'very secret key'
 
-# Landing page with form to input required information (see MainForm object).  Data is sent via POST request.
+# Landing page with form to input required information (see MainForm object).  Data is sent via POST request.  Flask session object
+# is used to store information from this form, so that calls to the NewsAPI can be made in a different route
 @app.route("/",methods=['GET','POST'])
 def index():
 	form = MainForm(request.form)
@@ -41,7 +42,6 @@ def news():
 	# Instantiate stock class using the name of the stock entered, and API keys entered
 	stock1 = Stock(session['stock_name'], session['alpha_key'], session['plotly_key'])
 
-
 	# Get the date that the stock dropped most in price, so that this can be used to get news articles in the News API
 	date = stock1.getMaxDropDate()[1]
 	# Dictionary including top news articles' headlines and URLs on the day of the highest price drop
@@ -65,6 +65,10 @@ def news():
 		h1_source=h1_source, h2_source=h2_source, h3_source=h3_source, h4_source=h4_source,
 		stock_url=stock_url, date=date
 		)
+
+
+# --------------------------------------- HELPER FUNCTIONS FOR ROUTES ABOVE ---------------------------------------
+
 
 # EXTERNAL API: NewsAPI.org
 # Use the Python requests library to send a GET request to the NewsAPI.org servers, which will then return a JSON object containing
@@ -97,10 +101,10 @@ def getHeadlines(articles):
 	# Append either the top 4 headlines, or however many are available if there are not 4 available
 	for i in range(1, min(5, len(articles)+1)):
 		key = 'h' + str(i)
-		headlines[key].append(articles[i-1]['title'])
-		headlines[key].append(articles[i-1]['url'])
-		headlines[key].append(articles[i-1]['description'])
-		headlines[key].append(articles[i-1]['source']['name'])
+		headlines[key].append(articles[i-1]['title']) # Article title
+		headlines[key].append(articles[i-1]['url']) # URL
+		headlines[key].append(articles[i-1]['description']) # Article intro
+		headlines[key].append(articles[i-1]['source']['name']) # Name of publication
 	return headlines
 
 if __name__ == "__main__":

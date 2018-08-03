@@ -2,7 +2,7 @@ Author: Nicholas A. Ficeto <br>
 Date: 2018/08/02
 
 OVERVIEW
---------
+--------------
 The purpose of this app is to demonstrate the myriad ways that real-world events can affect stock prices.  To achieve this, 
 I've created a user interface that combines a stock chart displaying closing prices over a 100-day span along with news articles corresponding to certain dates, like the day of the biggest drop in the stock's price -- currently this is the only "special date" I have implemented.
 
@@ -25,7 +25,7 @@ IMPLEMENTATION
 I used data from 2 external services to obtain the information I needed to build this app:
 
 1.) Alpha Vantage - A service that provides time series APIs for both real-time and historical stock data.  I use stock data from this service formatted in Pandas-style dataframes to perform any data analysis. <br>
-2.) NewsAPI.org - A service that provides JSON data for news articles pertaining to a particular topic. <br>
+2.) NewsAPI.org - A service that provides JSON data for news articles pertaining to a particular topic.
 
 I also used the scientific graphing libraries provided by "Plotly" to dynamically generate a URL, which is embedded within the HTML to display the stock chart.
 
@@ -34,5 +34,13 @@ Technology Stack: The majority of this program (including application lgoic) was
 Front-End: Standard HTML/CSS <br>
 Back-End: Python Flask Server
 
-
 I am the sole contributor to this app.
+
+USING THE APP
+--------------
+Because of the call limits on the free versions of the Alpha Vantage and Plotly APIs, the form requires that the user enter their
+API keys.  These can easily be obtained at: 
+
+1.) Alpha Vantage: https://www.alphavantage.co/support/#api-key <br>
+2.) Plotly: 
+

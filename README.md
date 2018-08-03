@@ -6,6 +6,9 @@ OVERVIEW
 The purpose of this app is to demonstrate the myriad ways that real-world events can affect stock prices.  To achieve this, 
 I've created a user interface that combines a stock chart displaying closing prices over a 100-day span along with news articles corresponding to certain dates, like the day of the biggest drop in the stock's price -- currently this is the only "special date" I have implemented.
 
+Landing page:
+<img width="1280" alt="screen shot 2018-08-03 at 12 13 32 pm" src="https://user-images.githubusercontent.com/16903793/43653891-7c1ddc28-9717-11e8-84c5-5d2297b4f789.png">
+
 EXAMPLE 1 (news articles reflect doubts about driverless technology):
 <img width="1280" alt="screen shot 2018-08-02 at 9 57 49 pm" src="https://user-images.githubusercontent.com/16903793/43620136-3e90efe4-969f-11e8-83b2-17979bb55d63.png">
 
@@ -42,5 +45,7 @@ Because of the call limits on the free versions of the Alpha Vantage and Plotly 
 API keys.  These can easily be obtained at: 
 
 1.) Alpha Vantage: https://www.alphavantage.co/support/#api-key <br>
-2.) Plotly: 
+2.) Plotly: https://plot.ly/settings/api#/
+
+Upon reaching the homage, enter information for the name of the company you are interested in analyzing via the fields 'Company Name', Company's 'stock name', and your API keys.
 

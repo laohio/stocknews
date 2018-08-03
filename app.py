@@ -22,7 +22,6 @@ def index():
 	form = MainForm(request.form)
 	print(form.errors)
 	
-
 	if request.method == 'POST':
 		session['stock_name'] = request.form['stock_name']
 		session['company_name'] = request.form['company_name']
@@ -45,21 +44,26 @@ def news():
 
 	# Get the date that the stock dropped most in price, so that this can be used to get news articles in the News API
 	date = stock1.getMaxDropDate()[1]
-	print('THE DATE RETRIEVED IS: ',date)
 	# Dictionary including top news articles' headlines and URLs on the day of the highest price drop
 	articles_dict = getArticleData(session['company_name'], date)
 
 	# Get the first 4 headlines text
 	h1, h2, h3, h4 = articles_dict['h1'][0], articles_dict['h2'][0], articles_dict['h3'][0], articles_dict['h4'][0]
 	# Get the first 4 headlines URLs
-	h1_link, h2_link, h3_link, h4_link = articles_dict['h1'][1], articles_dict['h2'][1], articles_dict['h3'][1], articles_dict['h4'][1]	
+	h1_link, h2_link, h3_link, h4_link = articles_dict['h1'][1], articles_dict['h2'][1], articles_dict['h3'][1], articles_dict['h4'][1]
+	# Get the first 4 descriptions
+	h1_intro, h2_intro, h3_intro, h4_intro = articles_dict['h1'][2],articles_dict['h2'][2],articles_dict['h3'][2],articles_dict['h4'][2]
+	# Get the first 4 news sources
+	h1_source, h2_source, h3_source, h4_source = articles_dict['h1'][3],articles_dict['h2'][3],articles_dict['h3'][3],articles_dict['h4'][3]
 	# Get Plotly graph URL for the stock name entered
 	stock_url = stock1.getGraphURL()
 
 	return render_template("charts.html",
 		headline1=h1, headline2=h2, headline3=h3, headline4=h4,
 		h1_link=h1_link, h2_link=h2_link, h3_link=h3_link, h4_link=h4_link,
-		stock_url=stock_url
+		h1_intro=h1_intro, h2_intro=h2_intro, h3_intro=h3_intro, h4_intro=h4_intro,
+		h1_source=h1_source, h2_source=h2_source, h3_source=h3_source, h4_source=h4_source,
+		stock_url=stock_url, date=date
 		)
 
 # EXTERNAL API: NewsAPI.org
@@ -95,6 +99,8 @@ def getHeadlines(articles):
 		key = 'h' + str(i)
 		headlines[key].append(articles[i-1]['title'])
 		headlines[key].append(articles[i-1]['url'])
+		headlines[key].append(articles[i-1]['description'])
+		headlines[key].append(articles[i-1]['source']['name'])
 	return headlines
 
 

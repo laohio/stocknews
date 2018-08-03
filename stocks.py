@@ -20,9 +20,7 @@ from datetime import datetime
 # to make a request to Alpha Vantage's servers, which returns a Pandas-style dataframe to represent the data (note: this process is abstracted 
 # via the Alpha Vantage Python module).
 class Stock(object):
-	def __init__(self, stock_name, alpha_key, plotly_key):
-		print('NAME OF THE STOCK IS: ',stock_name,'KEY IS: ',alpha_key)
-		
+	def __init__(self, stock_name, alpha_key, plotly_key):		
 		# Initialize the stock's name as a member variable
 		self.name = stock_name
 		# Set Alpha Vantage API key as a member variable
@@ -56,7 +54,8 @@ class Stock(object):
 		        if close_today - close_yesterday < smallest_gap:
 		            date_index = i
 		            smallest_gap = close_today - close_yesterday
-		return (date_index, self.data.iloc[date_index][3])
+		date = self.data.index[date_index]
+		return (date_index, date)
 
 	# Get the four coordinates (2 points on graph) whose line represents the biggest price drop of the stock within the 
 	# time period.  Call getMaxDropDate() to get the index of the date with the biggest price drop
@@ -72,7 +71,6 @@ class Stock(object):
 		# Get y coordinates as prices
 		y1, y2 = drop.iloc[0]['4. close'], drop.iloc[1]['4. close']
 
-		
 		return x1, y1, x2, y2
 
 	# EXTERNAL API: Plotly graphing library

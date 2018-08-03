@@ -4,14 +4,18 @@ html {
 }
 body {
 	font-family: 'Roboto Condensed', sans-serif;
-	color: white;
 }
+
+h2 {
+	color: black;
+}
+
 .result-box {
 	background-color: gray;
 	padding: 10px;
 	padding: 10px;
 	margin: 20px;
-	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
 }
 
 .result-box:hover {
@@ -21,4 +25,9 @@ body {
 .result-box a {
 	text-decoration: none;
 	color: inherit;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: bold;
 }

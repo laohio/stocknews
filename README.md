@@ -14,7 +14,7 @@ Fig 2:
 <img width="1280" alt="screen shot 2018-08-02 at 9 07 17 pm" src="https://user-images.githubusercontent.com/16903793/43618981-91129e6c-9699-11e8-8b23-f1bdf3b6f0bc.png">
 
 The inspiration for this app stems from my personal curiosity to learn more about short-term price fluctuations in the stock
-market, and how big news announcements (e.g. Amazon acquiring Whole Foods) can affect invester confidence.  This is a personal
+market, and how external forces (e.g. Amazon acquiring Whole Foods) can affect invester confidence.  This is a personal
 side project I did for my own learning, and thus may not run perfectly.
 
 IMPLEMENTATION

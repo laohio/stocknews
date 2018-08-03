@@ -12,7 +12,7 @@ EXAMPLE 1:
 <img width="1280" alt="screen shot 2018-08-02 at 9 07 17 pm" src="https://user-images.githubusercontent.com/16903793/43618981-91129e6c-9699-11e8-8b23-f1bdf3b6f0bc.png">
 
 EXAMPLE 2:
-<img width="1279" alt="screen shot 2018-08-02 at 9 50 36 pm" src="https://user-images.githubusercontent.com/16903793/43619948-4effdbf2-969e-11e8-980e-b56259f91b8a.png">
+<img width="1280" alt="screen shot 2018-08-02 at 9 57 49 pm" src="https://user-images.githubusercontent.com/16903793/43620136-3e90efe4-969f-11e8-83b2-17979bb55d63.png">
 
 <img width="1279" alt="screen shot 2018-08-02 at 9 46 54 pm" src="https://user-images.githubusercontent.com/16903793/43619952-58b4a18c-969e-11e8-81aa-1688d83a8f62.png">
 

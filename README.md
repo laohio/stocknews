@@ -1,4 +1,4 @@
-Author: Nicholas A. Ficeto
+Author: Nicholas A. Ficeto <br>
 Date: 2018/08/02
 
 OVERVIEW
@@ -28,7 +28,7 @@ a URL which is added to the HTML, and subsequently embeds the stock chart create
 Technology Stack: The majority of this program (including application lgoic) was written using python.
 
 
-Front-End: Standard HTML/CSS
+Front-End: Standard HTML/CSS <br>
 Back-End: Python Flask Server
 
 

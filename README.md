@@ -32,7 +32,7 @@ I used data from 2 external services to obtain the information I needed to build
 
 I also used the scientific graphing libraries provided by "Plotly" to dynamically generate a URL, which is embedded within the HTML to display the stock chart.
 
-Technology Stack: The majority of this program (including application lgoic) was written using Python.
+Technology Stack: The majority of this program (including application logic) was written using Python.
 
 Front-End: Standard HTML/CSS <br>
 Back-End: Python Flask Server

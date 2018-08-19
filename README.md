@@ -3,7 +3,7 @@ Date: 2018/08/02
 
 OVERVIEW
 --------------
-The purpose of this app is to demonstrate the myriad ways that real-world events can affect stock prices.  To achieve this, 
+The purpose of this app is to create dynamic news dashboards for publicly-traded companies, based on their stock performance.  The inspiration behind this was me wanting to learn more about the myriad ways that real-world events can affect stock prices.  To achieve this, 
 I've created a user interface that combines a stock chart displaying closing prices over a 100-day span along with news articles corresponding to certain dates, like the day of the biggest drop in the stock's price -- currently this is the only "special date" I have implemented.
 
 Landing page:
